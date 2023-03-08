@@ -7,6 +7,8 @@ services:
       MYSQL_DATABASE: wpdb
       MYSQL_USER: wpuser
       MYSQL_PASSWORD: wppassword
+    ports:
+      - "3307:3306"
     volumes:
       - mysql:/var/lib/mysql
 
@@ -23,8 +25,6 @@ services:
       WORDPRESS_DB_PASSWORD: wppassword
       WORDPRESS_DB_NAME: wpdb
     volumes:
-      ["./:/var/www/html"]
+      ["./:/var/www/html/wp-content"]
 volumes:
   mysql: {}
-  # weird comment fuck
-  #HjVp%UszI0Kjd39cPO
